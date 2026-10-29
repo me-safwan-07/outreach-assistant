@@ -1,0 +1,160 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum RoleCategory {
+  HR_RECRUITER
+  FOUNDER_EXEC
+  ENGINEERING_LEAD
+  SOFTWARE_ENGINEER
+  OTHER
+}
+
+enum EmailStatus {
+  FOUND
+  NOT_FOUND
+  GUESSED_UNVERIFIED
+  ERROR
+}
+
+enum DraftStatus {
+  DRAFT
+  COPIED
+  SENT
+  REPLIED
+}
+
+enum PipelineStage {
+  COMPANY
+  EMPLOYEES
+  SCORING
+  EMAILS
+  DRAFTS
+  DONE
+  FAILED
+}
+
+model Company {
+  id          String   @id @default(cuid())
+  linkedinUrl String   @unique
+  name        String?
+  website     String?
+  domain      String?
+  industry    String?
+  size        String?
+  description String?
+  location    String?
+  rawJson     Json?
+  createdAt   DateTime @default(now())
+
+  employees    Employee[]
+  pipelineRuns PipelineRun[]
+}
+
+model Employee {
+  id              String       @id @default(cuid())
+  companyId       String
+  firstName       String
+  lastName        String
+  headline        String?
+  currentTitle    String?
+  location        String?
+  linkedinUrl     String
+  about           String?
+  skillsJson      Json?
+  experienceJson  Json?
+  hiring          Boolean?
+  openToWork      Boolean?
+  roleCategory    RoleCategory @default(OTHER)
+  relevanceScore  Int          @default(0)
+  scoreReason     String?
+  isTop           Boolean      @default(false)
+  rawJson         Json?
+  createdAt       DateTime     @default(now())
+
+  company      Company       @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  emailLookups EmailLookup[]
+  emailDrafts  EmailDraft[]
+
+  @@unique([companyId, linkedinUrl])
+  @@index([companyId])
+  @@index([isTop])
+}
+
+model EmailLookup {
+  id         String      @id @default(cuid())
+  employeeId String
+  email      String?
+  status     EmailStatus
+  confidence Int?
+  source     String?
+  createdAt  DateTime    @default(now())
+
+  employee Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+
+  @@index([employeeId])
+}
+
+model EmailDraft {
+  id         String      @id @default(cuid())
+  employeeId String
+  subject    String
+  body       String      @db.Text
+  model      String
+  status     DraftStatus @default(DRAFT)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+
+  employee Employee @relation(fields: [employeeId], references: [id], onDelete: Cascade)
+
+  @@index([employeeId])
+}
+
+model PipelineRun {
+  id           String        @id @default(cuid())
+  companyId    String
+  stage        PipelineStage @default(COMPANY)
+  progress     Int           @default(0)
+  errorMessage String?
+  startedAt    DateTime      @default(now())
+  finishedAt   DateTime?
+
+  company Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+}
+
+model ApiUsage {
+  id       String   @id @default(cuid())
+  provider String
+  count    Int      @default(0)
+  date     DateTime @default(now()) @db.Date
+
+  @@unique([provider, date])
+  @@index([provider])
+}
+
+model Settings {
+  id              String   @id @default("singleton")
+  // Profile
+  name            String   @default("Muhammed Safwan")
+  role            String   @default("Full Stack Developer")
+  location        String   @default("Bengaluru, India")
+  education       String   @default("Recently graduated, B.Com in Computer Applications")
+  experience      String   @default("Freelance Full Stack Developer; completed a Full Stack Developer internship")
+  techStack       String   @default("Next.js, React, TypeScript, Node.js, Express.js, PostgreSQL, Prisma, Tailwind CSS")
+  portfolioUrl    String   @default("https://drive.google.com/file/d/1F0G0wM91fEoH-l9P_nzDitqvPEJ6T-aH/view?usp=sharing")
+  // Limits
+  maxApifyCalls   Int      @default(100)
+  maxHunterCalls  Int      @default(25)
+  maxGeminiCalls  Int      @default(100)
+  updatedAt       DateTime @updatedAt
+}

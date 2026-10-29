@@ -1,0 +1,257 @@
+[
+  {
+    "id": "mock-emp-1",
+    "firstName": "Priya",
+    "lastName": "Sharma",
+    "headline": "Senior Technical Recruiter | Talent Acquisition | Hiring Full Stack Developers",
+    "about": "Passionate about connecting top engineering talent with innovative companies. Specializing in full-stack roles across India.",
+    "openToWork": false,
+    "hiring": true,
+    "location": { "linkedinText": "Bengaluru, Karnataka, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/priya-sharma-recruiter",
+    "experience": [
+      {
+        "position": "Senior Technical Recruiter",
+        "companyName": "TechCorp India",
+        "skills": ["Technical Recruiting", "LinkedIn Sourcing", "ATS"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "Technical Recruiting" },
+      { "name": "Talent Acquisition" },
+      { "name": "LinkedIn Sourcing" }
+    ]
+  },
+  {
+    "id": "mock-emp-2",
+    "firstName": "Arjun",
+    "lastName": "Patel",
+    "headline": "Co-Founder & CTO at TechCorp India | Next.js & React enthusiast",
+    "about": "Building scalable SaaS products. Previously at Google India. MIT CS graduate. Love open source and developer communities.",
+    "openToWork": false,
+    "hiring": true,
+    "location": { "linkedinText": "Bengaluru, Karnataka, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/arjun-patel-cto",
+    "experience": [
+      {
+        "position": "Co-Founder & CTO",
+        "companyName": "TechCorp India",
+        "skills": ["Next.js", "React", "TypeScript", "PostgreSQL"],
+        "endDate": { "text": "Present" }
+      },
+      {
+        "position": "Senior Software Engineer",
+        "companyName": "Google",
+        "skills": ["React", "TypeScript"],
+        "endDate": { "text": "Jan 2022" }
+      }
+    ],
+    "skills": [
+      { "name": "Next.js" },
+      { "name": "React" },
+      { "name": "TypeScript" },
+      { "name": "PostgreSQL" }
+    ]
+  },
+  {
+    "id": "mock-emp-3",
+    "firstName": "Ravi",
+    "lastName": "Kumar",
+    "headline": "Engineering Manager | Full Stack Development | React & Node.js",
+    "about": "Leading a team of 8 engineers. Passionate about clean code, mentoring junior devs, and agile practices.",
+    "openToWork": false,
+    "hiring": true,
+    "location": { "linkedinText": "Bengaluru, Karnataka, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/ravi-kumar-em",
+    "experience": [
+      {
+        "position": "Engineering Manager",
+        "companyName": "TechCorp India",
+        "skills": ["React", "Node.js", "TypeScript", "Prisma"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "React" },
+      { "name": "Node.js" },
+      { "name": "TypeScript" },
+      { "name": "Prisma" },
+      { "name": "Tailwind CSS" }
+    ]
+  },
+  {
+    "id": "mock-emp-4",
+    "firstName": "Sneha",
+    "lastName": "Reddy",
+    "headline": "Full Stack Developer | Next.js | React | TypeScript | Node.js",
+    "about": "Passionate developer with 3 years of experience building full-stack applications. Love open source and developer tools.",
+    "openToWork": false,
+    "hiring": false,
+    "location": { "linkedinText": "Bengaluru, Karnataka, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/sneha-reddy-dev",
+    "experience": [
+      {
+        "position": "Full Stack Developer",
+        "companyName": "TechCorp India",
+        "skills": ["Next.js", "TypeScript", "PostgreSQL", "Prisma"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "Next.js" },
+      { "name": "TypeScript" },
+      { "name": "React" },
+      { "name": "Node.js" },
+      { "name": "PostgreSQL" }
+    ]
+  },
+  {
+    "id": "mock-emp-5",
+    "firstName": "Vikram",
+    "lastName": "Singh",
+    "headline": "Head of Engineering | Scalable Systems | TypeScript | AWS",
+    "about": "Leading engineering at TechCorp. 10 years building products. Speaker at JSConf India.",
+    "openToWork": false,
+    "hiring": false,
+    "location": { "linkedinText": "Mumbai, Maharashtra, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/vikram-singh-hoe",
+    "experience": [
+      {
+        "position": "Head of Engineering",
+        "companyName": "TechCorp India",
+        "skills": ["TypeScript", "Node.js", "AWS", "PostgreSQL"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "TypeScript" },
+      { "name": "Node.js" },
+      { "name": "AWS" },
+      { "name": "PostgreSQL" }
+    ]
+  },
+  {
+    "id": "mock-emp-6",
+    "firstName": "Ananya",
+    "lastName": "Iyer",
+    "headline": "People Operations Manager | HR Business Partner | Employee Experience",
+    "about": "Building a people-first culture at TechCorp. Focus on developer wellbeing, hiring, and retention.",
+    "openToWork": false,
+    "hiring": true,
+    "location": { "linkedinText": "Bengaluru, Karnataka, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/ananya-iyer-hr",
+    "experience": [
+      {
+        "position": "People Operations Manager",
+        "companyName": "TechCorp India",
+        "skills": ["HR", "People Ops", "Talent Acquisition"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "People Operations" },
+      { "name": "HR" },
+      { "name": "Talent Acquisition" }
+    ]
+  },
+  {
+    "id": "mock-emp-7",
+    "firstName": "Karthik",
+    "lastName": "Nair",
+    "headline": "Frontend Engineer | React | Next.js | UI/UX | Performance",
+    "about": "Frontend specialist with deep expertise in React and Next.js. Core contributor to company design system.",
+    "openToWork": false,
+    "hiring": false,
+    "location": { "linkedinText": "Bengaluru, Karnataka, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/karthik-nair-fe",
+    "experience": [
+      {
+        "position": "Frontend Engineer",
+        "companyName": "TechCorp India",
+        "skills": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "React" },
+      { "name": "Next.js" },
+      { "name": "TypeScript" },
+      { "name": "Tailwind CSS" }
+    ]
+  },
+  {
+    "id": "mock-emp-8",
+    "firstName": "Deepa",
+    "lastName": "Menon",
+    "headline": "Backend Engineer | Node.js | PostgreSQL | Microservices | Express",
+    "about": "Backend engineer with a focus on scalable APIs and database optimisation. Ex-Freshworks.",
+    "openToWork": false,
+    "hiring": false,
+    "location": { "linkedinText": "Chennai, Tamil Nadu, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/deepa-menon-be",
+    "experience": [
+      {
+        "position": "Backend Engineer",
+        "companyName": "TechCorp India",
+        "skills": ["Node.js", "PostgreSQL", "Express.js"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "Node.js" },
+      { "name": "PostgreSQL" },
+      { "name": "Express.js" },
+      { "name": "Prisma" }
+    ]
+  },
+  {
+    "id": "mock-emp-9",
+    "firstName": "Rahul",
+    "lastName": "Gupta",
+    "headline": "Product Manager | SaaS | B2B | Growth",
+    "about": "PM with 5 years building B2B SaaS products. Work closely with engineering to ship fast.",
+    "openToWork": false,
+    "hiring": false,
+    "location": { "linkedinText": "Bengaluru, Karnataka, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/rahul-gupta-pm",
+    "experience": [
+      {
+        "position": "Product Manager",
+        "companyName": "TechCorp India",
+        "skills": ["Product Management", "Agile", "Jira"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "Product Management" },
+      { "name": "Agile" },
+      { "name": "Jira" }
+    ]
+  },
+  {
+    "id": "mock-emp-10",
+    "firstName": "Shalini",
+    "lastName": "Kapoor",
+    "headline": "DevOps Engineer | AWS | Docker | Kubernetes | CI/CD",
+    "about": "Infrastructure engineer managing deployment pipelines and cloud cost optimisation.",
+    "openToWork": false,
+    "hiring": false,
+    "location": { "linkedinText": "Hyderabad, Telangana, India" },
+    "linkedinUrl": "https://www.linkedin.com/in/shalini-kapoor-devops",
+    "experience": [
+      {
+        "position": "DevOps Engineer",
+        "companyName": "TechCorp India",
+        "skills": ["AWS", "Docker", "Kubernetes", "CI/CD"],
+        "endDate": { "text": "Present" }
+      }
+    ],
+    "skills": [
+      { "name": "AWS" },
+      { "name": "Docker" },
+      { "name": "Kubernetes" },
+      { "name": "CI/CD" }
+    ]
+  }
+]

@@ -160,4 +160,4 @@ UI polls GET /api/pipeline/[id]/status every 3s
 - **EmailDraft** — Gemini-generated emails (DRAFT / COPIED / SENT / REPLIED)
 - **PipelineRun** — stage tracking per company
 - **ApiUsage** — daily usage counters per provider
-- **Settings** — your profile (name, role, stack, etc.) and API limits
+- **Settings** — your profile (name, role, stack, etc.) and API limit

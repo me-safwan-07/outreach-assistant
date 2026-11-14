@@ -161,3 +161,4 @@ UI polls GET /api/pipeline/[id]/status every 3s
 - **PipelineRun** — stage tracking per company
 - **ApiUsage** — daily usage counters per provider
 - **Settings** — your profile (name, role, stack, etc.) and API limit
+
